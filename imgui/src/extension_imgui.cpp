@@ -605,11 +605,11 @@ static int imgui_SetWindowFocus(lua_State* L)
     if (lua_isstring(L, 1))
     {
         const  char* name = luaL_checkstring(L, 1);
-        ImGUI::SetWindowFocus(name);
+        ImGui::SetWindowFocus(name);
     }
     else
     {
-        ImGUI::SetWindowFocus();
+        ImGui::SetWindowFocus();
     }
     ImGui::SetNextWindowPos(ImVec2(x, y), cond);
     return 0;
