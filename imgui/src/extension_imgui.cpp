@@ -611,7 +611,6 @@ static int imgui_SetWindowFocus(lua_State* L)
     {
         ImGui::SetWindowFocus();
     }
-    ImGui::SetNextWindowPos(ImVec2(x, y), cond);
     return 0;
 }
 static int imgui_SetNextWindowCollapsed(lua_State* L)
@@ -2710,8 +2709,8 @@ static const luaL_reg Module_methods[] =
     {"set_next_window_pos", imgui_SetNextWindowPos},
     {"set_next_window_focus", imgui_SetNextWindowFocus},
     {"set_window_focus", imgui_SetWindowFocus},
-    {"set_next_window_collapsed", imgui_SetNextWindowCollapsed}
-    {"set_window_collapsed", imgui_SetWindowCollapsed}
+    {"set_next_window_collapsed", imgui_SetNextWindowCollapsed},
+    {"set_window_collapsed", imgui_SetWindowCollapsed},
     {"get_window_size", imgui_GetWindowSize},
     {"get_window_pos", imgui_GetWindowPos},
     {"begin_window", imgui_Begin},
