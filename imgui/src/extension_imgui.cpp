@@ -3738,14 +3738,17 @@ dmExtension::Result InitializeDefoldImGui(dmExtension::Params* params)
 
 dmExtension::Result AppFinalizeDefoldImGui(dmExtension::AppParams* params)
 {
+    dmLogInfo("AppFinalizeDefoldImGui");
+    imgui_Shutdown();
+    imgui_ExtensionShutdown();
     return dmExtension::RESULT_OK;
 }
 
 dmExtension::Result FinalizeDefoldImGui(dmExtension::Params* params)
 {
-    dmLogInfo("FinalizeDefoldImGui");
-    imgui_Shutdown();
-    imgui_ExtensionShutdown();
+    //dmLogInfo("FinalizeDefoldImGui");
+    //imgui_Shutdown();
+    //imgui_ExtensionShutdown();
     return dmExtension::RESULT_OK;
 }
 
